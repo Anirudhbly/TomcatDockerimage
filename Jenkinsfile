@@ -21,7 +21,7 @@ stage("Package") {
 stage("Docker build") {
      steps {
       
-          sh "docker build -t Anirudh_tomcat ."
+          sh "docker build . -t Anirudh_tomcat"
      }
 }
 
