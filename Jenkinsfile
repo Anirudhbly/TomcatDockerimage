@@ -46,7 +46,7 @@ stage('Building our image') {
 }
 }
 }
-stage('Deploy our image') {
+stage('Push the image to Dockerhub') {
       steps{
       script {
       docker.withRegistry( '', registryCredential ) {
