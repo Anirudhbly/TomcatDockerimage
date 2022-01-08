@@ -16,7 +16,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Set up JDK 11
+    - name: Set up JDK
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
@@ -25,6 +25,7 @@ jobs:
     - name: Build with Maven
       run: |
         mvn -B package --file pom.xml
+        cd target
         ls -a
 
     - name: Build and Push Docker Image
