@@ -25,7 +25,8 @@ jobs:
     - name: Build with Maven
       run: |
         mvn -B package --file pom.xml
-        cd target
+        ls -a
+        cd target/JenkinsWar
         ls -a
 
     - name: Build and Push Docker Image
