@@ -24,10 +24,11 @@ jobs:
   #      cache: maven
     - name: Build with Maven
       run: |
-        sudo apt-get update
-        sudo apt-get install vim
+        sudo apt-get -y update
+        sudo apt-get -y install vim
         mvn -B package --file pom.xml
         ls -a
+        pwd
         cd target/JenkinsWar
         ls -a
 
